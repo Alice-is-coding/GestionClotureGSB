@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MyTools">
+      <HintPath>..\..\MyTools\MyTools\MyTools\obj\Debug\netcoreapp2.0\MyTools.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
