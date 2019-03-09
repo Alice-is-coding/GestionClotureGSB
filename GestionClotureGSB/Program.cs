@@ -15,15 +15,16 @@ namespace GestionClotureGSB
     class Program
     {
         // Propriétés.
-        private DateTime actualDate = DateTime.Today;
+        /// <value>Prend la valeur de la date du jour.</value>
+        private static DateTime actualDate = DateTime.Today;
+        /// <value>Contiendra une instance de la classe BDConnection.</value>
         private static BDConnection maCnx;
-        public static Program program = new Program();
         private static System.Timers.Timer myTimer;
 
         /// <summary>
         /// Valorise la propriété privée et statique maCnx avec une nouvelle instance de la classe BDConnection.
         /// </summary>
-        private void GetConnection()
+        private static void GetConnection()
         {
             Program.maCnx = MyTools.BDConnection.GetBDConnection("localhost", "gsb_frais", "root", "root");
         }
@@ -100,8 +101,8 @@ namespace GestionClotureGSB
         private static void AuDeclenchementTimer(Object source, ElapsedEventArgs e)
         {
             Console.WriteLine("\nl'événement 'chronométrage' a été déclenché le "+ e.SignalTime +"\n");
-            program.CloturerFicheFrais();
-            program.RembourserFicheFrais();
+            CloturerFicheFrais();
+            RembourserFicheFrais();
         }
 
         /// <summary>
@@ -109,7 +110,7 @@ namespace GestionClotureGSB
         /// Si nous nous trouvons entre le 1 et le 10 du mois courant, 
         /// cloture des fiches du mois N-1 en passant leur état de "CR" à "CL".
         /// </summary>
-        public void CloturerFicheFrais()
+        private static void CloturerFicheFrais()
         {
             // Si on se trouve actuellement entre le 1er et le 10 :
             if (MyTools.DateManagement.Between(1, 10))
@@ -127,7 +128,7 @@ namespace GestionClotureGSB
         /// mise à jour de l'état de la fiche de frais ("MP" à "RB"),
         /// pour informer que celle-ci a bien été remboursée.
         /// </summary>
-        public void RembourserFicheFrais()
+        private static void RembourserFicheFrais()
         {
             // A partir du 20ème jour du mois : 
             if (MyTools.DateManagement.Between(9, 31))
