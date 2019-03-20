@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="f76c5e63-fb29-4e34-95e3-2c1a58741be0" Title="GestionClotureGSB" Url="html/85d71223-e423-41a2-2cf8-2c19f70cfee2.htm">
+    <HelpTOCNode Id="a37448fe-83c8-44d2-94ad-e404378fe875" Title="Program Classe" Url="html/48711877-bab4-aeb6-e687-f3e480b5efdf.htm">
+      <HelpTOCNode Title="Program Constructeur " Url="html/f510e313-30fa-ebfd-f55f-1712321e3d67.htm" />
+      <HelpTOCNode Title="Program Constructeur " Url="html/5fe1fea0-62ed-3d61-8425-87d6385890dc.htm" />
+      <HelpTOCNode Id="1fc6cb64-ecd0-41fa-a707-c6e1f36b5f71" Title="Program M&#233;thodes" Url="html/016c5311-ad48-c346-5d37-3ff83a4195ce.htm">
+        <HelpTOCNode Title="Application M&#233;thode " Url="html/bf5cf957-7bbc-d3b4-1848-d281c8c06673.htm" />
+        <HelpTOCNode Title="AuDeclenchementTimer M&#233;thode " Url="html/93ade357-171c-b965-d715-5d54b26aefe1.htm" />
+        <HelpTOCNode Title="CloturerFicheFrais M&#233;thode " Url="html/59e353ff-e1d3-9b57-a40b-bccecc8fd2f1.htm" />
+        <HelpTOCNode Title="GetConnection M&#233;thode " Url="html/9197787f-5035-1a15-7855-f426fad296b7.htm" />
+        <HelpTOCNode Title="Main M&#233;thode " Url="html/2b158d77-c698-7da5-6089-7cacd7dfa8f7.htm" />
+        <HelpTOCNode Title="ParametrageTimer M&#233;thode " Url="html/8178a561-b26c-2a69-8e5d-b813837dcd32.htm" />
+        <HelpTOCNode Title="RembourserFicheFrais M&#233;thode " Url="html/9ba35a53-a106-a862-0b7e-e6fab1c6f2c7.htm" />
+        <HelpTOCNode Title="SetTimer M&#233;thode " Url="html/cc9a9076-41cd-3a5d-7ca5-90e1501869d0.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9b1cfa47-a617-42db-a4b0-fbdce59ccd12" Title="Program Champs" Url="html/75835047-fd78-4ede-c535-84de7f899509.htm">
+        <HelpTOCNode Title="actualDate Champ" Url="html/9d619441-6774-a0fc-3a80-247ed5bdcacc.htm" />
+        <HelpTOCNode Title="maCnx Champ" Url="html/df79c6ee-623e-e754-2bf7-71a007e3e7f3.htm" />
+        <HelpTOCNode Title="myTimer Champ" Url="html/0f6497b5-e070-55d1-6faf-102ccc5e69e4.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+	<RuntimeIdentifiers>win-x86;linux-x64;osx-x64</RuntimeIdentifiers>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Gestion de la clôture des fiches de frais de l'entreprise GSB à l'aide d'un timer.</Description>
+    <Authors>Alice Bord</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -13,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.15" />
+    <PackageReference Include="SHFB" Version="2014.5.31" />
   </ItemGroup>
 
   <ItemGroup>

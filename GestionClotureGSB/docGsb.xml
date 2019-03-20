@@ -23,22 +23,23 @@
                 Valorise la propriété privée et statique maCnx avec une nouvelle instance de la classe BDConnection.
             </summary>
 		</GetConnection>
-		<ParametrageTimer>
+		<OnExecute>
+		    <summary>
+			    Gestion des affichages consoles (commentés par défaut)(utiles pour debug).
+                Décommenter la 1ère ligne + à partir de la 3ème ligne de la méthode pour le debug.
+			</summary>
+		</OnExecute>
+		<Execute1>
             <summary>
-                Paramétrage du timer en fonction de l'intervalle de déclenchement souhaité. 
-                Si 0 envoyé en paramètre : 
-                Comportement par défaut du timer : déclenchement toutes les 2 mins.
-            </summary>
-            <param name="interval">Intervalle auquel doit se déclencher le timer.</param>
-		</ParametrageTimer>
-		<Application>
-            <summary>
-                Méthode appelée dans le Main.
-                S'occupe du lancement de l'application.
-                Fonctionnalités de debug avec affichages consoles et possibilité de stopper à tout moment le processus.
+                Exécution de l'application en fixant un intervalle précis du délais de déclenchement du timer.
             </summary>
             <param name="interval">Interval auquel doit se déclencher le timer.</param>
-		</Application>
+		</Execute1>
+		<Execute2>
+		    <summary>
+			    Exécution de l'application avec les paramètres par défaut du timer qui se déclenchera alors toutes les 2min.
+			</summary>
+		</Execute2>
 		<SetTimer>
             <summary>
                 Paramètrage du timer. 

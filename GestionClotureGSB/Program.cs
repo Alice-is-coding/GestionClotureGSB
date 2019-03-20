@@ -9,7 +9,7 @@ namespace GestionClotureGSB
      * Contient toutes les méthodes pour clôturer et mettre à remboursées les fiches de frais.
      */
     /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/Program/*'/>
-    class Program
+    abstract class Program
     {
         // Propriétés.
         /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/actualDate/*'/>
@@ -26,41 +26,34 @@ namespace GestionClotureGSB
             Program.maCnx = MyTools.BDConnection.GetBDConnection("localhost", "gsb_frais", "root", "root");
         }
 
-        // Paramétrage du timer en fonction de l'intervalle de déclenchement souhaité. 
-        /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/ParametrageTimer/*'/>
-        private static void ParametrageTimer(double interval)
+        // Gestion des affichages console lors de l'exécution de l'application.
+        /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/Execute2/*'/>
+        private static void OnExecute()
         {
-            // Paramétrage du timer.
-            if (interval != 0)
-            {
-                // Contient une valeur fixée par l'appelant de l'application dans le main.
-                SetTimer(interval);
-            }
-            else
-            {
-                // 0 envoyé par défaut dans l'appel de la méthode Application dans le main.
-                // Dans ce cas là, le comportement par défaut du timer sera de se déclencher toutes les 2mins.
-                SetTimer(120000);
-            }
-        }
-
-        // Méthode appelée dans le Main : S'occupe du lancement de l'application.
-        /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/Application/*'/>
-        public static void Application(double interval)
-        {
-            // Paramétrage du timer.
-            ParametrageTimer(interval);
-
-            Console.WriteLine("Appuyez sur la touche 'Entrée' pour quitter l'application");
-            Console.WriteLine("L'application a commencé le " + DateTime.Now);
+            //Console.WriteLine("Appuyez sur la touche 'Entrée' pour quitter l'application");
+            Console.WriteLine("L'application a commencé le " + DateTime.Now +"\n");
             Console.ReadLine();
-            Console.WriteLine("Terminaison de l'application...");
+            //Console.WriteLine("Terminaison de l'application...");
             // Exécuté dès lors qu'on appuie sur une touche du clavier. 
             // Stoppe le timer.
-            myTimer.Stop();
-            // Libération des ressources.
-            myTimer.Dispose();
-            Console.WriteLine("Fin.");
+            //myTimer.Stop();
+            //Libération des ressources.
+            //myTimer.Dispose();
+            //Console.WriteLine("Fin.");
+        }
+
+        // Exécuter l'application avec les paramètres par défaut du timer qui se déclenchera alors toutes les 2min.
+        /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/Execute2/*'/>
+        public static void Execute() => Execute(120000);
+
+        // Exécution de l'application en fixant un intervalle précis du délais de déclenchement du timer.
+        /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/Execute1/*'/>
+        public static void Execute(double interval)
+        {
+            // Paramétrage du timer.
+            SetTimer(interval);
+            // Exé. de l'application.
+            Program.OnExecute();         
         }
 
         // Paramètrage du timer. 
@@ -78,11 +71,11 @@ namespace GestionClotureGSB
         }
 
         // Evénement qui se déclenche lorsque le timer est lui-même déclenché.
-        /// Contient les méthodes métier à exécuter.
+        // Contient les méthodes métier à exécuter.
         /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/AuDeclenchementTimer/*'/>
         private static void AuDeclenchementTimer(Object source, ElapsedEventArgs e)
         {
-            Console.WriteLine("\nl'événement 'chronométrage' a été déclenché le "+ e.SignalTime +"\n");
+            Console.WriteLine("L'événement 'chronométrage' a été déclenché le "+ e.SignalTime +"\n");
             CloturerFicheFrais();
             RembourserFicheFrais();
         }
@@ -99,28 +92,32 @@ namespace GestionClotureGSB
                 GetConnection();
                 // Mise à jour de l'état de la fiche ("CR" à "CL").
                 maCnx.ReqUpdate("UPDATE fichefrais SET idetat = 'CL' WHERE idetat = 'CR' AND mois = '" + actualDate.Year + MyTools.DateManagement.GetPreviousMonth() + "'");
+            }else
+            {
+                Console.WriteLine("Pas de clôture : Nous ne sommes pas entre le 1er et le 10 du mois actuel.\n");
             }
         }
 
         // Information de remboursement de fiches de frais.
-        /// <include file="docGsb.xml" path="doc/members[name='gsb']/RembourserFicheFrais/*"/>
+        /// <include file='docGsb.xml' path='doc/members[@name="gsb"]/RembourserFicheFrais/*'/>
         private static void RembourserFicheFrais()
         {
             // A partir du 20ème jour du mois : 
-            if (MyTools.DateManagement.Between(9, 31))
+            if (MyTools.DateManagement.Between(20, 31))
             {
                 Console.WriteLine("Remboursement des fiches de frais...");
                 // Connexion à la BDD
                 GetConnection();
                 // Mise à jour de l'état de la fiche ("MP" à "RB").
                 maCnx.ReqUpdate("UPDATE fichefrais SET idetat = 'RB' WHERE mois = '" + actualDate.Year + MyTools.DateManagement.GetPreviousMonth() + "' AND idetat = 'MP'");
+            } else
+            {
+                Console.WriteLine("Pas de remboursement : Nous ne sommes pas entre le 20 et le dernier jour du mois actuel.\n");
             }
         }
-        static void Main(string[] args)
+        static void Main()
         {
-            // Lancement de l'application permettant de gérer la campagne de validation et de remboursement par les comptables.
-            // [Informations] veuillez-laisser le paramètre à 0 si vous souhaitez que le timer se déclenche toutes les deux minutes.
-            Application(0);
+            Program.Execute();
         }
     }
 }
