@@ -15,6 +15,10 @@
     <WarningsAsErrors />
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\ProjetsVisualStudio\GestionClotureGSB\GestionClotureGSB\GestionClotureGSB.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.15" />
     <PackageReference Include="SHFB" Version="2014.5.31" />
@@ -22,7 +26,7 @@
 
   <ItemGroup>
     <Reference Include="MyTools">
-      <HintPath>..\..\MyTools\MyTools\MyTools\obj\Debug\netcoreapp2.0\MyTools.dll</HintPath>
+      <HintPath>..\..\MyTools\MyTools\MyTools\bin\Release\netcoreapp2.1\MyTools.dll</HintPath>
     </Reference>
   </ItemGroup>
 

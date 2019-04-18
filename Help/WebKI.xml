@@ -1,38 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="actualDate champ" Url="html/9d619441-6774-a0fc-3a80-247ed5bdcacc.htm" />
-  <HelpKINode Title="Application m&#233;thode" Url="html/bf5cf957-7bbc-d3b4-1848-d281c8c06673.htm" />
   <HelpKINode Title="AuDeclenchementTimer m&#233;thode" Url="html/93ade357-171c-b965-d715-5d54b26aefe1.htm" />
   <HelpKINode Title="CloturerFicheFrais m&#233;thode" Url="html/59e353ff-e1d3-9b57-a40b-bccecc8fd2f1.htm" />
+  <HelpKINode Title="Execute m&#233;thode" Url="html/403db206-0cbf-7816-de7b-05106f3b9670.htm" />
   <HelpKINode Title="GestionClotureGSB espace de nom" Url="html/85d71223-e423-41a2-2cf8-2c19f70cfee2.htm" />
   <HelpKINode Title="GestionClotureGSB.Program classe" Url="html/48711877-bab4-aeb6-e687-f3e480b5efdf.htm" />
   <HelpKINode Title="GetConnection m&#233;thode" Url="html/9197787f-5035-1a15-7855-f426fad296b7.htm" />
-  <HelpKINode Title="maCnx champ" Url="html/df79c6ee-623e-e754-2bf7-71a007e3e7f3.htm" />
-  <HelpKINode Title="Main m&#233;thode" Url="html/2b158d77-c698-7da5-6089-7cacd7dfa8f7.htm" />
-  <HelpKINode Title="myTimer champ" Url="html/0f6497b5-e070-55d1-6faf-102ccc5e69e4.htm" />
-  <HelpKINode Title="ParametrageTimer m&#233;thode" Url="html/8178a561-b26c-2a69-8e5d-b813837dcd32.htm" />
+  <HelpKINode Title="Main m&#233;thode" Url="html/f3d85d4a-e75d-c620-ae1d-dbf249975153.htm" />
+  <HelpKINode Title="OnExecute m&#233;thode" Url="html/30ea04b3-da77-23dd-70b0-1d43aa406a25.htm" />
   <HelpKINode Title="Program classe">
     <HelpKINode Title="Program Classe" Url="html/48711877-bab4-aeb6-e687-f3e480b5efdf.htm" />
-    <HelpKINode Title="champs" Url="html/75835047-fd78-4ede-c535-84de7f899509.htm" />
     <HelpKINode Title="constructeur" Url="html/5fe1fea0-62ed-3d61-8425-87d6385890dc.htm" />
-    <HelpKINode Title="constructeur" Url="html/f510e313-30fa-ebfd-f55f-1712321e3d67.htm" />
     <HelpKINode Title="m&#233;thodes" Url="html/016c5311-ad48-c346-5d37-3ff83a4195ce.htm" />
   </HelpKINode>
-  <HelpKINode Title="Program.actualDate champ" Url="html/9d619441-6774-a0fc-3a80-247ed5bdcacc.htm" />
-  <HelpKINode Title="Program.Application m&#233;thode" Url="html/bf5cf957-7bbc-d3b4-1848-d281c8c06673.htm" />
   <HelpKINode Title="Program.AuDeclenchementTimer m&#233;thode" Url="html/93ade357-171c-b965-d715-5d54b26aefe1.htm" />
   <HelpKINode Title="Program.CloturerFicheFrais m&#233;thode" Url="html/59e353ff-e1d3-9b57-a40b-bccecc8fd2f1.htm" />
+  <HelpKINode Title="Program.Execute m&#233;thode" Url="html/403db206-0cbf-7816-de7b-05106f3b9670.htm" />
   <HelpKINode Title="Program.GetConnection m&#233;thode" Url="html/9197787f-5035-1a15-7855-f426fad296b7.htm" />
-  <HelpKINode Title="Program.maCnx champ" Url="html/df79c6ee-623e-e754-2bf7-71a007e3e7f3.htm" />
-  <HelpKINode Title="Program.Main m&#233;thode" Url="html/2b158d77-c698-7da5-6089-7cacd7dfa8f7.htm" />
-  <HelpKINode Title="Program.myTimer champ" Url="html/0f6497b5-e070-55d1-6faf-102ccc5e69e4.htm" />
-  <HelpKINode Title="Program.ParametrageTimer m&#233;thode" Url="html/8178a561-b26c-2a69-8e5d-b813837dcd32.htm" />
-  <HelpKINode Title="Program.Program constructeur">
-    <HelpKINode Title="Program Constructeur " Url="html/5fe1fea0-62ed-3d61-8425-87d6385890dc.htm" />
-    <HelpKINode Title="Program Constructeur " Url="html/f510e313-30fa-ebfd-f55f-1712321e3d67.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Program.Main m&#233;thode" Url="html/f3d85d4a-e75d-c620-ae1d-dbf249975153.htm" />
+  <HelpKINode Title="Program.OnExecute m&#233;thode" Url="html/30ea04b3-da77-23dd-70b0-1d43aa406a25.htm" />
+  <HelpKINode Title="Program.Program constructeur" Url="html/5fe1fea0-62ed-3d61-8425-87d6385890dc.htm" />
   <HelpKINode Title="Program.RembourserFicheFrais m&#233;thode" Url="html/9ba35a53-a106-a862-0b7e-e6fab1c6f2c7.htm" />
   <HelpKINode Title="Program.SetTimer m&#233;thode" Url="html/cc9a9076-41cd-3a5d-7ca5-90e1501869d0.htm" />
+  <HelpKINode Title="Program.ShowLog m&#233;thode" Url="html/5e69fb32-300a-705a-fb0b-15352e7d3d47.htm" />
+  <HelpKINode Title="Program.WriteLog m&#233;thode" Url="html/498aedc0-6e4a-5c65-8feb-309711e4306b.htm" />
   <HelpKINode Title="RembourserFicheFrais m&#233;thode" Url="html/9ba35a53-a106-a862-0b7e-e6fab1c6f2c7.htm" />
   <HelpKINode Title="SetTimer m&#233;thode" Url="html/cc9a9076-41cd-3a5d-7ca5-90e1501869d0.htm" />
+  <HelpKINode Title="ShowLog m&#233;thode" Url="html/5e69fb32-300a-705a-fb0b-15352e7d3d47.htm" />
+  <HelpKINode Title="WriteLog m&#233;thode" Url="html/498aedc0-6e4a-5c65-8feb-309711e4306b.htm" />
 </HelpKI>

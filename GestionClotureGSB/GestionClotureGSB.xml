@@ -1,6 +1,10 @@
+<?xml version="1.0"?>
 <doc>
-    <members name="gsb">
-        <Program>
+    <assembly>
+        <name>GestionClotureGSB</name>
+    </assembly>
+    <members>
+        <member name="T:GestionClotureGSB.Program">
             <summary>
                 La classe principale <c>Program</c>. 
                 Contient l'ensemble des méthodes permettant d'assurer la gestion de la campagne de validation des fiches de frais par les comptables de la société GSB.
@@ -8,79 +12,73 @@
                 Permet la clôture des fiches du mois N-1 entre le 1er et le 10 du mois.
                 Permet de modifier une fiche de frais remboursée à partir du 20ème jour du mois (modification de son état de "MP" à "RB").
             </summary>
-		</Program>
-        <actualDate>
+        </member>
+        <member name="F:GestionClotureGSB.Program.actualDate">
             <value>Prend la valeur de la date du jour.</value>
-	    </actualDate>
-		<maCnx>
+        </member>
+        <member name="F:GestionClotureGSB.Program.maCnx">
             <value>Contiendra une instance de la classe BDConnection.</value>
-        </maCnx>
-		<myTimer>
-		    <value>Contiendra le timer paramétré.</value>
-        </myTimer>
-		<GetConnection>
+        </member>
+        <member name="F:GestionClotureGSB.Program.myTimer">
+            <value>Contiendra le timer paramétré.</value>
+        </member>
+        <member name="M:GestionClotureGSB.Program.GetConnection">
             <summary>
                 Valorise la propriété privée et statique maCnx avec une nouvelle instance de la classe BDConnection.
             </summary>
-		</GetConnection>
-		<OnExecute>
-		    <summary>
+        </member>
+        <member name="M:GestionClotureGSB.Program.OnExecute">
+            <summary>
 			    Gestion des affichages consoles (commentés par défaut)(utiles pour debug).
                 Décommenter la 1ère ligne + à partir de la 3ème ligne de la méthode pour le debug.
 			</summary>
-		</OnExecute>
-		<Execute1>
+        </member>
+        <member name="M:GestionClotureGSB.Program.Execute">
             <summary>
-                Exécution de l'application en fixant un intervalle précis du délais de déclenchement du timer.
-            </summary>
-            <param name="interval">Interval auquel doit se déclencher le timer.</param>
-		</Execute1>
-		<Execute2>
-		    <summary>
 			    Exécution de l'application avec les paramètres par défaut du timer qui se déclenchera alors toutes les 2min.
 			</summary>
-		</Execute2>
-		<SetTimer>
+        </member>
+        <member name="M:GestionClotureGSB.Program.Execute(System.Double)">
+            <summary>
+                Exécution de l'application en fixant un intervalle précis du délais de déclenchement du timer.
+            </summary><param name="interval">Interval auquel doit se déclencher le timer.</param>
+        </member>
+        <member name="M:GestionClotureGSB.Program.SetTimer(System.Double)">
             <summary>
                 Paramètrage du timer. 
                 Instanciation d'un timer avec l'intervalle envoyé en paramètre.
                 Ajout d'un événement déclencheur : déclenchement du timer.
-            </summary>
-            <param name="interval">Intervalle auquel doit se déclencher le timer.</param>
-		</SetTimer>
-		<AuDeclenchementTimer>
+            </summary><param name="interval">Intervalle auquel doit se déclencher le timer.</param>
+        </member>
+        <member name="M:GestionClotureGSB.Program.AuDeclenchementTimer(System.Object,System.Timers.ElapsedEventArgs)">
             <summary>
                 Evénement qui se déclenche lorsque le timer est lui-même déclenché.
                 Contient les méthodes métier à exécuter.
-            </summary>
-            <param name="source">Source du déclenchement de l'événement.</param>
-            <param name="e">Fournit des données pour l'événement Elapsed (déclenché).</param>
-		</AuDeclenchementTimer>
-		<CloturerFicheFrais>
+            </summary><param name="source">Source du déclenchement de l'événement.</param><param name="e">Fournit des données pour l'événement Elapsed (déclenché).</param>
+        </member>
+        <member name="M:GestionClotureGSB.Program.CloturerFicheFrais">
             <summary>
                 Campagne de validation des fiches de frais,
                 Si nous nous trouvons entre le 1 et le 10 du mois courant, 
                 cloture des fiches du mois N-1 en passant leur état de "CR" à "CL".
             </summary>
-		</CloturerFicheFrais>
-		<RembourserFicheFrais>
+        </member>
+        <member name="M:GestionClotureGSB.Program.RembourserFicheFrais">
             <summary>
                 A partir du 20ème jour du mois,
                 mise à jour de l'état de la fiche de frais ("MP" à "RB"),
                 pour informer que celle-ci a bien été remboursée.
             </summary>
-		</RembourserFicheFrais>
-		<WriteLog>
-		    <summary>
+        </member>
+        <member name="M:GestionClotureGSB.Program.WriteLog(System.String)">
+            <summary>
 			    Ecriture dans le fichier de logs comme un journal d'événements.
-			</summary>
-			<param name="textLog">Informations à écrire dans le log.</param>
-		</WriteLog>
-		<ShowLog>
-		    <summary>
+			</summary><param name="textLog">Informations à écrire dans le log.</param>
+        </member>
+        <member name="M:GestionClotureGSB.Program.ShowLog">
+            <summary>
 			   Permet d'afficher dans la console le contenu du fichier de logs.
 			</summary>
-		</ShowLog>
-	</members>
+        </member>
+    </members>
 </doc>
-		
