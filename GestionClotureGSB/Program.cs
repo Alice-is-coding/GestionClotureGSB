@@ -32,7 +32,6 @@ namespace GestionClotureGSB
         private static void GetConnection()
         {
             Program.maCnx = MyTools.BDConnection.GetBDConnection("localhost", "gsb_frais", "root", "root");
-            //Program.maCnx = MyTools.BDConnection.GetBDConnection("sql105.byethost.com", "b3_23696328_gsb_frais", "b3_23696328", "btssioslam");
         }
 
         // Gestion des affichages console lors de l'exécution de l'application.
