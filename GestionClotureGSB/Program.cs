@@ -1,7 +1,6 @@
 ﻿/**
  * Script : Application console .NetCore pour la gestion automatique de la clôture de fiches de frais GSB.
- * Author : Alice BORD
- * Email : alice.bord1@gmail.com
+ * Author : Alice B.
  * Date : 31/03/2019
  */
 
